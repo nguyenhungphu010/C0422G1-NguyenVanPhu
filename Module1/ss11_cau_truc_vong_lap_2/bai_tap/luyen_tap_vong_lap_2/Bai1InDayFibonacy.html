@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Day Fibonacy</title>
+</head>
+<body>
+<script>
+    function backgroundImage() {
+        document.body.style.backgroundImage = "url('https://www.itl.cat/pngfile/big/306-3065177_bmw-s1000rr-wallpaper-4k.jpg')"
+    }backgroundImage()
+
+    let n1 = 0;
+    let n2 = 1;
+    let n3;
+    let sum = '0'
+    let n = Number(prompt(" nhap day so Fibonacy"))
+    for (let i=0;i <=n;i++){
+        n3 = n1+n2;
+        n1 = n2;
+        n2 = n3;
+        sum+=' '+n1;
+    }document.write(sum)
+</script>
+</body>
+</html>
