@@ -1,6 +1,6 @@
 package ss3_mang_va_phuong_thuc_trong_java.bai_tap;
 import java.util.Scanner;
-public class TimPhanTuLonNharTrongMang2Chieu {
+public class FindingTheMaxElementInMatrix {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your row numbers matrix: ");

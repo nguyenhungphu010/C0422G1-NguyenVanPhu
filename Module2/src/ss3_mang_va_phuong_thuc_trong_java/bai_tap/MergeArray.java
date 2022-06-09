@@ -1,6 +1,6 @@
 package ss3_mang_va_phuong_thuc_trong_java.bai_tap;
 import java.util.Scanner;
-public class GopMang {
+public class MergeArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int[] array1 = {5, 7, 4, 4, 7, 8};

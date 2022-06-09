@@ -1,6 +1,6 @@
 package ss3_mang_va_phuong_thuc_trong_java.bai_tap;
 
-public class TimPhanTuNhoNhatTrongMang {
+public class FindTheMaxElement {
     public static void main(String[] args) {
         int[] array = {4, 5, 3, 6, 7, 7, 5, 9, 4, 1};
 
