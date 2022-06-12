@@ -1,6 +1,6 @@
 package ss4_lop_va_doi_tuong.bai_tap;
 import java.util.Scanner;
-public class LopStopWatch {
+public class StopWatch {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
