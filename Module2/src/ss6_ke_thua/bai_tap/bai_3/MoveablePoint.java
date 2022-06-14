@@ -1,4 +1,4 @@
-package ss6_ke_thua.bai_tap;
+package ss6_ke_thua.bai_tap.bai_3;
 
 public class MoveablePoint extends Point {
     private float xSpeed;

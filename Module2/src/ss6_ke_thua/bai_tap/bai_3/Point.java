@@ -1,4 +1,4 @@
-package ss6_ke_thua.bai_tap;
+package ss6_ke_thua.bai_tap.bai_3;
 
 public class Point {
     float x;
@@ -35,10 +35,7 @@ public class Point {
     }
 
     public float[] getXY() {
-        float[] arrayPoint = new float[2];
-        arrayPoint[0] = x;
-        arrayPoint[1] = y;
-        return arrayPoint;
+        return new float[] {this.x, this.y};
     }
 
     @Override
