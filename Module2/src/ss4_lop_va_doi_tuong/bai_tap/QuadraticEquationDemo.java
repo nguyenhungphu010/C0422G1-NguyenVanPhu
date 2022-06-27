@@ -1,6 +1,6 @@
 package ss4_lop_va_doi_tuong.bai_tap;
 import java.util.Scanner;
-public class QuadraticEquation {
+public class QuadraticEquationDemo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("The QuadraticEquation is : ax^2+bx+c=0");
