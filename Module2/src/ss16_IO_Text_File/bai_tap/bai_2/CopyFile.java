@@ -16,7 +16,7 @@ public class CopyFile {
                 + "\n 2. not copy"
                 + "\n 3. exit ");
 
-        System.out.println(" 1");
+        System.out.println();
         int choice = Integer.parseInt(scanner.nextLine());
         switch (choice) {
             case 1:
@@ -32,30 +32,25 @@ public class CopyFile {
                 System.out.println("Enter the correct choice number");
         }
         //
-        File fileTarget = new File(pathTarget);
-        FileWriter fileWriterTarget = null;
-        BufferedWriter bufferedWriterTarget = null;
         try {
-            File fileSource = new File(pathSource);
-            if (!fileSource.exists()) {
-                throw new FileNotFoundException();
-            }
-            // read the source file
-            BufferedReader brSource = new BufferedReader(new FileReader(fileSource));
-
-
-            //write down the target file
-
+            File fileTarget = new File("D:\\C0422G1-NguyenVanPhu\\Module2\\src\\ss16_IO_Text_File\\bai_tap\\bai_2\\target.CSV");
+            FileWriter fileWriterTarget = null;
+            BufferedWriter bufferedWriterTarget = null;
             fileWriterTarget = new FileWriter(fileTarget, append);
             bufferedWriterTarget = new BufferedWriter(fileWriterTarget);
-            while (brSource.readLine() != null) {
-                bufferedWriterTarget.write(brSource.readLine());
+
+            File fileSource = new File("D:\\C0422G1-NguyenVanPhu\\Module2\\src\\ss16_IO_Text_File\\bai_tap\\bai_2\\source.CSV");
+//
+            BufferedReader brSource = new BufferedReader(new FileReader(fileSource));
+            String line ="";
+            while ((line=brSource.readLine()) != null) {
+                bufferedWriterTarget.write(line);
                 bufferedWriterTarget.newLine();
             }
             bufferedWriterTarget.close();
 
         } catch (Exception e) {
-            System.err.println(" source file does not exist");
+            e.printStackTrace();
         }
         ;
     }
