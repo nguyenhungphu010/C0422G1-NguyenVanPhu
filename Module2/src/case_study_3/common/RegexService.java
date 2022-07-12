@@ -1,9 +1,14 @@
-package case_study_2.common;
+package case_study_3.common;
 
 
 import java.util.Scanner;
 
 public class RegexService {
+    // regex for Customer
+    private static final String REGEX_VNCUS_ID = "^KHVN\\-[0-9]{5}$";
+    private static final String REGEX_OCUS_ID = "^KHNN\\-[0-9]{5}$";
+    private static final String REGEX_BILL_ID = "^MHD\\-[0-9]{3}$";
+
     // regex for Facility Class
     private static final String REGEX_SERVICE_ID_VILLA = "^SVVL\\-[0-9]{4}$";
     private static final String REGEX_SERVICE_ID_HOUSE = "^SVHO\\-[0-9]{4}$";
@@ -42,54 +47,62 @@ public class RegexService {
         return value;
     }
 
-    public static String checkRegexStringID() {
+    public static String checkRegexVNID() {
         String value = new Scanner(System.in).nextLine();
-        while (!value.matches(REGEX_ID)) {
+        while (!value.matches(REGEX_VNCUS_ID)) {
+            System.out.print("Enter again: ");
+            value = new Scanner(System.in).nextLine();
+        }
+        return value;
+    }
+    public static String checkRegexOverseaID() {
+        String value = new Scanner(System.in).nextLine();
+        while (!value.matches(REGEX_OCUS_ID)) {
             System.out.print("Enter again: ");
             value = new Scanner(System.in).nextLine();
         }
         return value;
     }
 
-    public static String checkRegexStringEID() {
+    public static String checkRegexStringBillID() {
         String value = new Scanner(System.in).nextLine();
-        while (!value.matches(REGEX_E_ID)) {
+        while (!value.matches(REGEX_BILL_ID)) {
             System.out.print("Enter again: ");
             value = new Scanner(System.in).nextLine();
         }
         return value;
     }
 
-    public static String checkRegexStringCID() {
-        String value = new Scanner(System.in).nextLine();
-        while (!value.matches(REGEX_C_ID)) {
-            System.out.print("Enter again: ");
-            value = new Scanner(System.in).nextLine();
-        }
-        return value;
-    }
-
-    public static String checkRegexStringEmail() {
-        String value = new Scanner(System.in).nextLine();
-        while (!value.matches(REGEX_EMAIL)) {
-            System.out.print("Enter again: ");
-            value = new Scanner(System.in).nextLine();
-        }
-        return value;
-    }
-
-    public static String checkRegexStringPhoneNumber() {
-        String value = new Scanner(System.in).nextLine();
-        while (!value.matches(REGEX_PHONE)) {
-            System.out.print("Enter again: ");
-            value = new Scanner(System.in).nextLine();
-        }
-        return value;
-    }
+//    public static String checkRegexStringCID() {
+//        String value = new Scanner(System.in).nextLine();
+//        while (!value.matches(REGEX_C_ID)) {
+//            System.out.print("Enter again: ");
+//            value = new Scanner(System.in).nextLine();
+//        }
+//        return value;
+//    }
+//
+//    public static String checkRegexStringEmail() {
+//        String value = new Scanner(System.in).nextLine();
+//        while (!value.matches(REGEX_EMAIL)) {
+//            System.out.print("Enter again: ");
+//            value = new Scanner(System.in).nextLine();
+//        }
+//        return value;
+//    }
+//
+//    public static String checkRegexStringPhoneNumber() {
+//        String value = new Scanner(System.in).nextLine();
+//        while (!value.matches(REGEX_PHONE)) {
+//            System.out.print("Enter again: ");
+//            value = new Scanner(System.in).nextLine();
+//        }
+//        return value;
+//    }
 
     public static void main(String[] args) {
 //        String name = checkRegexStringName();
-        String phone = checkRegexStringEID();
+        String phone = checkRegexStringBillID();
     }
 
     public static boolean checkServiceName(String serviceName) {

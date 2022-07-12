@@ -1,2 +1,4 @@
-package case_study_2.models;public class Contract {
+package case_study_2.models.booking;
+
+public class Contract {
 }

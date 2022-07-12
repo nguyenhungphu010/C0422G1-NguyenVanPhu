@@ -1,10 +1,9 @@
-package case_study_2.models;
-
-import case_study_2.service.implement.FacilityServiceImpl;
+package case_study_2.models.facility;
 
 import java.util.Objects;
 
 public abstract class Facility {
+    private final static String COMMA= ",";
     private String serviceName;
     private double UsableArea;
     private double rentalCost;
@@ -84,6 +83,10 @@ public abstract class Facility {
     @Override
     public int hashCode() {
         return Objects.hash(serviceName, UsableArea, rentalCost, maxGuest, rentalType, serviceID);
+    }
+
+    public  String convertLine(){
+        return this.serviceName+ COMMA + this.UsableArea+ COMMA+ this.rentalCost+ COMMA+ this.maxGuest+ COMMA+ this.rentalType+ COMMA+ this.serviceID;
     }
 
     @Override

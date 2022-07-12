@@ -3,7 +3,7 @@ package case_study_3.common;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
-public class BillCheckException {
+public class CheckException {
     private static Scanner sc = new Scanner(System.in);
 
 

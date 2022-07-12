@@ -1,9 +1,9 @@
-package case_study_2.service.implement;
+package case_study_2.service;
 
 import case_study_2.service.IService;
 
-public interface ContactService extends IService {
-    void createNewContact();
-    void displayListContact();
-    void editContact();
+public interface ContractService extends IService {
+    void createNewContract();
+    void displayListContract();
+    void editContract();
 }

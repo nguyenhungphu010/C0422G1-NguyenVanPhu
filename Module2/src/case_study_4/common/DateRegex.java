@@ -5,7 +5,7 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-public class DateOfBirthRegex {
+public class DateRegex {
     private static final String BIRTHDAY_FORMAT = "dd/MM/yyyy";
 
     public static boolean CheckDateOfBirth(String birthday) {
@@ -15,13 +15,34 @@ public class DateOfBirthRegex {
                 LocalDate date = LocalDate.parse(birthday, dateFormat);
                 LocalDate now = LocalDate.now();
                 int currentAge = Period.between(date, now).getYears();
-                if (currentAge > 18 && currentAge < 100) {
+                if (currentAge > 18 && currentAge < 60) {
                     return true;
                 } else {
-                    throw new AgeException("Age Under 18 or Over 100");
+                    throw new AgeException("Age Under 18 or Over 60");
                 }
             } else {
                 throw new AgeException("Input the wrong format of Birthday");
+            }
+        } catch (AgeException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+
+    }
+    public static boolean CheckDateEnroll(String birthday) {
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(BIRTHDAY_FORMAT);
+        try {
+            if (isDate(birthday)) {
+                LocalDate date = LocalDate.parse(birthday, dateFormat);
+                LocalDate now = LocalDate.now();
+                int currentDay = Period.between(date, now).getDays();
+                if (currentDay >0) {
+                    return true;
+                } else {
+                    throw new AgeException("Wrong Date");
+                }
+            } else {
+                throw new AgeException("Input the wrong format of Date");
             }
         } catch (AgeException e) {
             System.out.println(e.getMessage());

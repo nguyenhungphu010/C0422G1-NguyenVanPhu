@@ -1,6 +1,7 @@
-package case_study_2.models;
+package case_study_2.models.facility;
 
 public class Room extends Facility{
+    private final static String COMMA= ",";
     private boolean freeService ;
 
     public Room() {
@@ -17,6 +18,11 @@ public class Room extends Facility{
 
     public void setFreeService(boolean freeService) {
         this.freeService = freeService;
+    }
+
+    @Override
+    public String convertLine() {
+        return super.convertLine()+COMMA + this.freeService;
     }
 
     @Override

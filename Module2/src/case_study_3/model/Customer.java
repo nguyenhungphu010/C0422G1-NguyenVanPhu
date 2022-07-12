@@ -1,23 +1,19 @@
 package case_study_3.model;
 
-public abstract class Person {
+public abstract class Customer {
     private final static String PATTERN = "dd-MM-yyyy";
     private final static String COMMA = ",";
     private String name;
     private String customerID;
+    private double consumption;
 
-    public Person() {
+    public Customer() {
     }
 
-    public Person(String name, String IDNumber) {
+    public Customer(String name, String customerID, double consumption) {
         this.name = name;
-        this.customerID = IDNumber;
-    }
-
-
-    public String convertLine(){
-        String line = this.name + COMMA  + this.customerID + COMMA ;
-        return line;
+        this.customerID = customerID;
+        this.consumption = consumption;
     }
 
     public String getName() {
@@ -34,6 +30,19 @@ public abstract class Person {
 
     public void setCustomerID(String customerID) {
         this.customerID = customerID;
+    }
+
+    public double getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(double consumption) {
+        this.consumption = consumption;
+    }
+
+    public String convertLine(){
+        String line = this.name + COMMA  + this.customerID + COMMA + this.consumption;
+        return line;
     }
 
     @Override

@@ -1,31 +1,29 @@
-package case_study_2.common;
+package case_study_3.common;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.Scanner;
-import java.util.regex.Pattern;
 
-public class DateOfBirthRegex {
-    private static final String BIRTHDAY_FORMAT = "dd/MM/yyyy";
+public class BillDateRegex {
+    private static final String RELEASES_DATE = "dd/MM/yyyy";
 
-    public static boolean CheckDateOfBirth(String birthday) {
-        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(BIRTHDAY_FORMAT);
+    public static boolean CheckReleasedDate(String releasedDate) {
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(RELEASES_DATE);
         try {
-            if (isDate(birthday)) {
-                LocalDate date = LocalDate.parse(birthday, dateFormat);
+            if (isDate(releasedDate)) {
+                LocalDate date = LocalDate.parse(releasedDate, dateFormat);
                 LocalDate now = LocalDate.now();
-                int currentAge = Period.between(date, now).getYears();
-                if (currentAge > 18 && currentAge < 100) {
+                int currentAge = Period.between(date, now).getDays();
+                if (currentAge > 0) {
                     return true;
                 } else {
-                    throw new AgeException("Age Under 18 or Over 100");
+                    throw new DateException("input the wrong date");
                 }
             } else {
-                throw new AgeException("Input the wrong format of Birthday");
+                throw new DateException("Input the wrong format of released Date");
             }
-        } catch (AgeException e) {
+        } catch ( DateException e) {
             System.out.println(e.getMessage());
             return false;
         }
@@ -35,13 +33,13 @@ public class DateOfBirthRegex {
 
 
     public static void main(String[] args) {
-        String str = "15/14/2011";
+        String str = "15/12/2011";
 
         System.out.println(isDate(str));
     }
 
     public static boolean isDate(String target) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(BIRTHDAY_FORMAT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(RELEASES_DATE);
         //convert String to LocalDate
         try {
             LocalDate localDate = LocalDate.parse(target, formatter);

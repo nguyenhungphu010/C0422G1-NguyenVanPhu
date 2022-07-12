@@ -1,9 +1,7 @@
-package case_study_2.models;
-
-import javax.swing.*;
-import java.util.Date;
+package case_study_2.models.person;
 
 public class Employee extends Person {
+    private final static String COMMA = ",";
     private String eID;
     private String education;
     private String level;
@@ -52,6 +50,12 @@ public class Employee extends Person {
 
     public void setSalary(Double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String convertLine() {
+        return super.convertLine() + COMMA + this.eID + COMMA + this.education + COMMA + this.level + COMMA + this.salary;
+
     }
 
     @Override

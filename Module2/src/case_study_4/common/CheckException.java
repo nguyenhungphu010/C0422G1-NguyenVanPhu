@@ -1,9 +1,6 @@
-package case_study_2.common;
+package case_study_4.common;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class CheckException {
@@ -38,15 +35,4 @@ public class CheckException {
         }
         return value;
     }
-//    private  static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-//    public static LocalDate checkBirthDay(String strDate){
-//
-//        LocalDate localDate = LocalDate.parse(strDate,formatter);
-//        System.out.println(localDate);
-//        return localDate;
-//    }
-//
-//    public static void main(String[] args) {
-//        int a = checkParseInteger();
-//    }
 }

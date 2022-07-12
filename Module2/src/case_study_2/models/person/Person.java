@@ -1,10 +1,11 @@
-package case_study_2.models;
+package case_study_2.models.person;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Person {
     private final static String PATTERN = "dd-MM-yyyy";
+    private final static String COMMA = ",";
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat(PATTERN);
     private String name;
     private String dayOfBirth;
@@ -71,6 +72,11 @@ public abstract class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String convertLine(){
+        String line = this.name + COMMA + this.dayOfBirth + COMMA + this.sex + COMMA + this.IDNumber + COMMA + this.phoneNumber + COMMA + this.email;
+        return line;
     }
 
     @Override

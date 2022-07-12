@@ -1,11 +1,11 @@
-package case_study_2.common.data;
+package case_study_2.common;
 
 import case_study_2.common.CheckException;
 
 public class PersonUtility {
     public static String PersonSex (){
         do {
-            System.out.println("Input the Employee sex: " +
+            System.out.println("Input the sex choice: " +
                     "\n1. Male" +
                     "\n2. Female");
             int choice = CheckException.checkParseInteger();
@@ -71,5 +71,32 @@ public class PersonUtility {
                     break;
             }
         } while (true);
+    }
+    public static String CustomerRank(){
+        do{
+            System.out.println("Input the Customer Type: " +
+                    "\n1. Diamond" +
+                    "\n2. Platinum" +
+                    "\n3. Gold" +
+                    "\n4. Silver" +
+                    "\n5. Member" );
+            int choice = CheckException.checkParseInteger();
+            switch (choice){
+                case 1:
+                    return "Diamond";
+                case 2:
+                    return "Platinum";
+                case 3:
+                    return "Gold";
+                case 4:
+                    return "Silver";
+                case 5:
+                    return "Member";
+                default:
+                    System.out.println("Please input again: ");
+                    break;
+            }
+        }while (true);
+
     }
 }

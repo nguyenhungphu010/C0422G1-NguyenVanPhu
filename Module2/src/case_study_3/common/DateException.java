@@ -1,9 +1,8 @@
-package case_study_2.common;
+package case_study_3.common;
 
-public class AgeException extends Exception{
-    public AgeException (String message){
+public class DateException extends Exception{
+    public DateException(String message){
         super(message);
-
     }
 
 }

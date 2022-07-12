@@ -1,8 +1,7 @@
-package case_study_2.models;
-
-import java.util.Date;
+package case_study_2.models.person;
 
 public class Customer extends Person{
+    private final static String COMMA = ",";
     private String cID;
     private String rank;
     private String address;
@@ -39,6 +38,11 @@ public class Customer extends Person{
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String convertLine() {
+        return super.convertLine()+COMMA + this.cID + COMMA + this.rank + COMMA + this.address;
     }
 
     @Override
