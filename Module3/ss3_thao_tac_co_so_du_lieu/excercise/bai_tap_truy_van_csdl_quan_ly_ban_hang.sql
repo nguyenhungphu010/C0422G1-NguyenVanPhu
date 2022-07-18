@@ -7,19 +7,19 @@ INSERT INTO `csdl_quan_ly_ban_hang`.`orderdetail` (`oID`, `pID`, `odQTY`) VALUES
 select `order`.oID, `order`.oDate, `order`.oPrice from  `order`;
 -- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
 select customer.cName, product.pName from customer 
-join `order` on `order`.cID = customer.cID
-join orderdetail on orderdetail.oId = `order`. oId
-join product on product.pID = orderdetail.pID;
+	join `order` on `order`.cID = customer.cID
+	join orderdetail on orderdetail.oId = `order`. oId
+	join product on product.pID = orderdetail.pID;
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
 select customer.cName from customer
 where cName not in (
-select customer.cName from customer 
-join `order` on `order`.cID = customer.cID
-join orderdetail on orderdetail.oId = `order`. oId
-join product on product.pID = orderdetail.pID
+	select customer.cName from customer 
+	join `order` on `order`.cID = customer.cID
+	join orderdetail on orderdetail.oId = `order`. oId
+	join product on product.pID = orderdetail.pID
 ); 
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
 select `order`.oID,`order`.oDate, sum(orderdetail.odQTY*product.pPrice) as totalPrice from `order` 
-join orderdetail on orderdetail.oId = `order`. oId
-join product on product.pID = orderdetail.pID
-group by `order`.oID
+	join orderdetail on orderdetail.oId = `order`. oId
+	join product on product.pID = orderdetail.pID
+	group by `order`.oID

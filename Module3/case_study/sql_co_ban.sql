@@ -88,11 +88,11 @@ where kh1.ho_ten = kh2.ho_ten
 group by ho_ten
 having count(*) =1 ; 
 --  cach 3: chưa hiểu lắm 
-select khach_hang.ho_ten from khach_hang
-where ho_ten not in (select distinct kh1.ho_ten from khach_hang kh1
-where exists( 
-select kh1.ho_ten from khach_hang kh2
-where kh1.ho_ten = kh2.ho_ten limit 1,1)); 
+-- select khach_hang.ho_ten from khach_hang
+-- where ho_ten not in (select distinct kh1.ho_ten from khach_hang kh1
+-- where exists( 
+-- select kh1.ho_ten from khach_hang kh2
+-- where kh1.ho_ten = kh2.ho_ten limit 1,1)); 
 
 -- task 9 : 
 select khach_hang.ho_ten, khach_hang.ma_khach_hang, count(khach_hang.ma_khach_hang) as so_khach_dat from khach_hang
@@ -158,6 +158,6 @@ having count_dv_di_kem=1;
 select nhan_vien.ma_nhan_vien, nhan_vien.ho_va_ten, count(hop_dong.ma_nhan_vien) as count_sl_chot_hop_dong from  nhan_vien
 join hop_dong on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
 group by ma_nhan_vien
-having count_sl_chot_hop_dong >=3; 
+having count_sl_chot_hop_dong >=1; 
 
 
