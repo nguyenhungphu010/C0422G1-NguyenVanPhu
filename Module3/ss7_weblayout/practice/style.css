@@ -1,0 +1,41 @@
+body {
+    font-family: Arial;
+}
+
+#menu, #menu ul, #menu li {
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    list-style: none;
+    /* bỏ đi ký hiệu đánh dấu của mỗi phần tử */
+    position: relative;
+    /* danh sách con được đặt cạnh phần tử chứa nó */
+    width: 120px;
+    height: 50px;
+    /* cố định các vị trí của danh sách */
+    padding: 0 20px;
+    /*cố định lề trái và phải cảu nội dung danh sách với khung viền bên ngoài*/
+    background-color: black;
+    line-height: 30px;
+    /* cố định chiều cao của mỗi dòng văn bản bên trong*/
+    cursor: pointer;
+    /*    chuyển biếu tượng của con trỏ qua hình bàn tay*/
+}
+#menu li a {
+    text-decoration: none;
+    color: white;
+}
+#menu li:hover {
+    background-color: red;
+}
+#menu ul ul{
+    position: absolute;
+    top: 0;
+    left: 150px;
+    visibility: hidden;
+}
+#menu ul li:hover ul{
+    visibility: visible;
+}
