@@ -3,48 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Tạo Layout với RWD</title>
-    <link rel="stylesheet" href="layout_grid_demo.css">
+    <link rel="stylesheet" href="layout_design.css">
     <style>
-        #content {
-            padding: 15px;
+        .content {
+            margin: 0px auto;
         }
+
         .ads {
             padding: 30px;
             border: 3px solid lightgrey;
             margin: 30px 10px 30px 10px;
             text-align: center;
+            height: 100%;
         }
-        #header{
+        .ads-content{
+            background-color: darkgrey;
+        }
+
+        .header {
+            margin: 0px auto;
             list-style-type: none;
+            background-color: black;
         }
-        #header ul{
+
+        .header ul {
             padding: 0;
             margin: 20px 20px 20px 20px;
         }
-        #header ul li{
+
+        .header ul li {
             float: left;
             list-style: none;
-            width: 100px ;
+            width: 100px;
             text-align: center;
             display: block;
             vertical-align: middle;
+            color: whitesmoke;
         }
-        #header li:hover{
+
+        .header li:hover {
             color: white;
             background-color: blue;
         }
-        #footer{
+        .link{
+            color: blue;
+            background-color: darkgrey;
             text-align: center;
         }
-        .row li{
-            list-style : none;
+
+        .footer {
+            background-color: gray;
+            text-align: center;
+        }
+
+        .content li {
+            list-style: none;
             padding-bottom: 20px;
         }
     </style>
+
 </head>
 <body>
-<div class="row head" id="header">
-    <div class="col-l-10">
+<div class="header col-12" >
+    <div class="col-10">
         <ul>
             <li>LOGO</li>
             <li>HOME</li>
@@ -53,15 +74,15 @@
             <li>CONTACTS</li>
         </ul>
     </div>
-    <div class="col-l-2">
+    <div class="col-2">
         <ul>
             <li>LOGIN</li>
         </ul>
     </div>
 
 </div>
-<div class="row" >
-    <div class="col-s-12 col-m-4 col-l-2 left">
+<div class="content col-12" >
+    <div class=" link col-2 ">
         <ul>
             <li>Link1</li>
             <li>Link1</li>
@@ -70,8 +91,8 @@
             <li>Link1</li>
         </ul>
     </div>
-    <div class="col-s-12 col-m-12 col-l-8 contain">
-        <div  id="content">
+    <div class="col-8 ">
+        <div id="content">
             <h1>Welcome</h1>
             <p style="text-align: justify">
                 Musk was born in Pretoria, South Africa, where he grew up. He briefly attended the University of
@@ -84,23 +105,23 @@
                 company was bought by eBay in 2002, for $1.5 billion.
             </p>
 
-<hr/>
+            <hr/>
             <h1>TEST</h1>
             <p>
                 Test content
             </p>
         </div>
     </div>
-    <div class="col-s-12 col-m-12 col-l-2 right">
+    <div class=" ads-content col-2 ">
         <p class="ads">
             ADS
         </p>
         <p class="ads">
             ADS
         </p>
+    </div>
 </div>
-</div>
-<div class="row footer" id="footer">
+<div class="footer col-12" >
     <p style="text-align: center"> Footer Text</p>
 </div>
 </body>
