@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Layout với RWD</title>
+    <link rel="stylesheet" href="layout_grid_demo.css">
+    <style>
+        #content {
+            padding: 15px;
+        }
+        .ads {
+            padding: 30px;
+            border: 3px solid lightgrey;
+            margin: 30px 10px 30px 10px;
+            text-align: center;
+        }
+        #header{
+            list-style-type: none;
+        }
+        #header ul{
+            padding: 0;
+            margin: 20px 20px 20px 20px;
+        }
+        #header ul li{
+            float: left;
+            list-style: none;
+            width: 100px ;
+            text-align: center;
+            display: block;
+            vertical-align: middle;
+        }
+        #header li:hover{
+            color: white;
+            background-color: blue;
+        }
+        #footer{
+            text-align: center;
+        }
+        .row li{
+            list-style : none;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="row head" id="header">
+    <div class="col-l-10">
+        <ul>
+            <li>LOGO</li>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>PROJECTS</li>
+            <li>CONTACTS</li>
+        </ul>
+    </div>
+    <div class="col-l-2">
+        <ul>
+            <li>LOGIN</li>
+        </ul>
+    </div>
+
+</div>
+<div class="row" >
+    <div class="col-s-12 col-m-4 col-l-2 left">
+        <ul>
+            <li>Link1</li>
+            <li>Link1</li>
+            <li>Link1</li>
+            <li>Link1</li>
+            <li>Link1</li>
+        </ul>
+    </div>
+    <div class="col-s-12 col-m-12 col-l-8 contain">
+        <div  id="content">
+            <h1>Welcome</h1>
+            <p style="text-align: justify">
+                Musk was born in Pretoria, South Africa, where he grew up. He briefly attended the University of
+                Pretoria before moving to Canada at age 17, acquiring citizenship through his Canadian-born mother. Two
+                years later, he matriculated at Queen's University and transferred to the University of Pennsylvania,
+                where he received bachelor's degrees in Economics and Physics. He moved to California in 1995 to attend
+                Stanford University but decided instead to pursue a business career, co-founding the web software
+                company Zip2 with his brother Kimbal. The startup was acquired by Compaq for $307 million in 1999. The
+                same year, Musk co-founded online bank X.com, which merged with Confinity in 2000 to form PayPal. The
+                company was bought by eBay in 2002, for $1.5 billion.
+            </p>
+
+<hr/>
+            <h1>TEST</h1>
+            <p>
+                Test content
+            </p>
+        </div>
+    </div>
+    <div class="col-s-12 col-m-12 col-l-2 right">
+        <p class="ads">
+            ADS
+        </p>
+        <p class="ads">
+            ADS
+        </p>
+</div>
+</div>
+<div class="row footer" id="footer">
+    <p style="text-align: center"> Footer Text</p>
+</div>
+</body>
+</html>
