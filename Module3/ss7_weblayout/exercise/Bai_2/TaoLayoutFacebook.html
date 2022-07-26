@@ -4,27 +4,89 @@
     <meta charset="UTF-8">
     <title>layout facebook</title>
     <link rel="stylesheet" href="layout_grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
-        p{
+
+        p {
             background-color: white;
-            border: 3px solid ;
+            border: 3px solid;
+        }
+        .header{
+            background-color: white;
+            height: 50px;
+        }
+
+        .header-left {
+            list-style: none;
+            line-height: 50px;
+        }
+
+        .header-left a {
+            vertical-align: center;
+        }
+
+        .header-center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px ;
+            vertical-align: center;
+        }
+
+        .header-center span {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 40px ;
+            vertical-align: center;
+        }
+
+        .header-right {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: right;
+            line-height: 50px;
+
+        }
+
+        .header-right span {
+            margin: auto;
+            padding: 0px;
+            text-align: right;
         }
     </style>
 </head>
 <body>
-<div>
-    <header>
-        <img src="icon/header/2021_Facebook_icon.svg.png" width="40px" height="40px">
-        <input width="300" height="40px" placeholder="search facebook">
-        <img src="icon/header/home_icon.png" width="40px" height="40px" >
-        <img src="icon/header/watch_icon.png" width="40px" height="40px">
-        <img src="icon/header/market_icon.png" width="40px" height="40px">
-        <img src="icon/header/group_icon.png" width="40px" height="40px">
-        <img src="icon/header/facebook-gaming.png" width="30px" height="30px">
-        <img src="icon/header/icons8-circled-menu-100.png" width="30px" height="30px">
-        <img src="icon/header/facebook-messenger-96.png" width="30px" height="30px">
-        <img src="icon/header/icons8-notification-64.png" width="30px" height="30px">
-    </header>
+<div class="row header">
+    <div  col-12>
+        <div class="header-left col-3">
+            <a href=""><img src="icon/header/2021_Facebook_icon.svg.png" width="40px" height="40px"></a>
+            <a href="" style="padding-top: 8px"> <input width="300" height="40px" placeholder="search facebook"></a>
+        </div>
+        <div class="header-center col-6">
+            <span><img src="icon/header/home_icon.png" width="40px" height="40px"></span>
+            <span><img src="icon/header/watch_icon.png" width="40px" height="40px"></li></span>
+            <span><img src="icon/header/market_icon.png" width="40px" height="40px"></span>
+            <span><img src="icon/header/group_icon.png" width="40px" height="40px"></span>
+            <span><img src="icon/header/facebook-gaming.png" width="30px" height="30px"></span>
+            <!--        <ul>-->
+            <!--            <li><img src="icon/header/home_icon.png" width="40px" height="40px" ></li>-->
+            <!--            <li><img src="icon/header/watch_icon.png" width="40px" height="40px"></li>-->
+            <!--            <li><img src="icon/header/market_icon.png" width="40px" height="40px"></li>-->
+            <!--            <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>-->
+            <!--            <li><img src="icon/header/facebook-gaming.png" width="30px" height="30px"></li>-->
+            <!--        </ul>-->
+        </div>
+        <div class="header-right col-3">
+            <span><a href=""><img src="icon/header/icons8-circled-menu-100.png" width="30px" height="30px"></a></span>
+            <span><a href=""><img src="icon/header/facebook-messenger-96.png" width="30px" height="30px"></a></span>
+            <span><a href=""><img src="icon/header/icons8-notification-64.png" width="30px" height="30px"></a></span>
+            <span ><a href=""><img  style="border-radius: 50%" src="img/yurri.jpg" width="50px" height="50px"></a></span>
+
+
+        </div>
+    </div>
 </div>
 <div class="row">
     <p class="col-12 col-xs-8 col-sm-4">
