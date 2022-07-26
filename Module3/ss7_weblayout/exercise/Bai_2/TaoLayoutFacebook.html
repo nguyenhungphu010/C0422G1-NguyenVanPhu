@@ -11,7 +11,8 @@
             background-color: white;
             border: 3px solid;
         }
-        .header{
+
+        .header {
             background-color: white;
             height: 50px;
         }
@@ -19,6 +20,7 @@
         .header-left {
             list-style: none;
             line-height: 50px;
+            padding-top: 15px;
         }
 
         .header-left a {
@@ -29,17 +31,21 @@
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            text-decoration: none;
-            line-height: 50px ;
+            line-height: 50px;
             vertical-align: center;
+            padding-top: 15px;
         }
 
         .header-center span {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            padding: 40px ;
+            padding: 40px;
             vertical-align: center;
+        }
+        .header-center span:hover {
+            background-color: whitesmoke;
+            border-bottom:  1px solid red;
         }
 
         .header-right {
@@ -47,26 +53,103 @@
             margin-right: auto;
             text-align: right;
             line-height: 50px;
-
+            vertical-align: center;
         }
 
         .header-right span {
             margin: auto;
-            padding: 0px;
+            padding: 10px;
             text-align: right;
         }
+
+        #search {
+            border-radius: 10px;
+            border: 1px solid #666666;
+            vertical-align: center;
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: lightgray;
+        }
+
+        .header-left span {
+
+            padding-left: 40px
+        }
+
+        .body {
+            background-color: whitesmoke;
+        }
+
+        .content-center {
+            margin-top: 30px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+
+        }
+
+        .content-center img {
+            border-radius: 10px;
+        }
+
+        .side-bar-left {
+            margin-top: 30px;
+
+        }
+
+        .side-bar-right {
+
+        }
+
+        .side-bar-left-icon img {
+            display: block;
+            text-align: right;
+
+        }
+
+        .side-bar-left-icon ul li {
+            text-align: right;
+            padding-left: 40px;
+        }
+
+        .side-bar-left-content ul {
+            list-style: none;
+        }
+
+        .side-bar-left-content ul li {
+            padding-left: 0px;
+            line-height: 40px;
+
+        }
+
+        .side-bar-left {
+            display: block;
+        }
+
+        .side-bar-right ul {
+            list-style: none;
+        }
+
+        .ads-content{
+            height: 150px;
+        }
+
+
     </style>
 </head>
 <body>
 <div class="row header">
-    <div  col-12>
-        <div class="header-left col-3">
-            <a href=""><img src="icon/header/2021_Facebook_icon.svg.png" width="40px" height="40px"></a>
-            <a href="" style="padding-top: 8px"> <input width="300" height="40px" placeholder="search facebook"></a>
+    <div col-12>
+        <div class="header-left col-1">
+            <span><a href=""><img src="icon/header/2021_Facebook_icon.svg.png" width="40px" height="40px"></a></span>
+        </div>
+        <div class="header-left col-2">
+            <a href=""> <input id="search" size="18" placeholder="search facebook"></a>
         </div>
         <div class="header-center col-6">
             <span><img src="icon/header/home_icon.png" width="40px" height="40px"></span>
-            <span><img src="icon/header/watch_icon.png" width="40px" height="40px"></li></span>
+            <span><img src="icon/header/watch_icon.png" width="40px" height="40px"></span>
             <span><img src="icon/header/market_icon.png" width="40px" height="40px"></span>
             <span><img src="icon/header/group_icon.png" width="40px" height="40px"></span>
             <span><img src="icon/header/facebook-gaming.png" width="30px" height="30px"></span>
@@ -82,16 +165,69 @@
             <span><a href=""><img src="icon/header/icons8-circled-menu-100.png" width="30px" height="30px"></a></span>
             <span><a href=""><img src="icon/header/facebook-messenger-96.png" width="30px" height="30px"></a></span>
             <span><a href=""><img src="icon/header/icons8-notification-64.png" width="30px" height="30px"></a></span>
-            <span ><a href=""><img  style="border-radius: 50%" src="img/yurri.jpg" width="50px" height="50px"></a></span>
-
-
+            <span><a href=""><img style="border-radius: 50%" src="img/yurri.jpg" width="50px" height="50px"></a></span>
         </div>
     </div>
 </div>
-<div class="row">
-    <p class="col-12 col-xs-8 col-sm-4">
-        this is header
-    </p>
+<div class="body col-12">
+    <div class="side-bar-left col-3">
+        <div class=" side-bar-left-icon col-4">
+            <ul>
+                <li><img style="border-radius: 50%" src="img/yurri.jpg" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+                <li><img src="icon/header/group_icon.png" width="40px" height="40px"></li>
+            </ul>
+        </div>
+        <div class="side-bar-left-content col-8">
+            <ul>
+                <li><a>Nguyễn Văn Phú</a></li>
+                <li><a>Friends</a></li>
+                <li><a>Groups</a></li>
+                <li><a>Market Place</a></li>
+                <li><a>Watch</a></li>
+                <li><a>Memories</a></li>
+                <li><a>Saved</a></li>
+                <li><a>Pages</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="content-center col-6">
+        <img src="img/yuri3.jpg" width="120px"/>
+        <img src="img/yuri4.jpg" width="120px"/>
+        <img src="img/yuri2.jpg" width="120px"/>
+        <img src="img/yuri5.jpg" width="120px"/>
+        <img src="img/yuri6.jpg" width="120px"/>
+    </div>
+
+    <div class="side-bar-right col-3">
+        <div class="side-bar-right-ads col-6">
+            <ul>
+                <li style="height: 20px">Sponsored</li>
+                <li class="ads-content"><img src="img/ads2.jpg" height="150px" width="150px"/></li>
+                <li class="ads-content"><img src="img/ads1.jpg" height="150px" width="150px"/></li>
+            </ul>
+
+        </div>
+        <div class="side-bar-right-content col-6" >
+
+            <ul>
+                <li style="height: 20px"></li>
+                <li class="ads-content" style="padding-top: 50px"><a href="https://tiki.vn/">Tiki<br>tiki.vn</a></li>
+                <li class="ads-content" style="padding-top: 50px"><a href="https://dienmaycholon.vn">Chào hè rực rỡ, giảm giá 50%<br>dienmaycholon.vn</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
 </div>
 </body>
 </html>

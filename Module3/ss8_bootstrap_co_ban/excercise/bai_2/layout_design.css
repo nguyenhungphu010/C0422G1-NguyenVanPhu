@@ -1,15 +1,11 @@
 * {
-    border: none;
+    border: none ;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
 .col-1 {
     width: 8.33%
 }
@@ -168,5 +164,4 @@
     .col-xs-12 {
         width: 100%;
     }
-
 }
